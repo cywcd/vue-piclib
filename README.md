@@ -79,7 +79,8 @@ package.json 已经默认配置好相关应用
 > 4.解决跨域（用nodejs代理转发请求） 
 
 请求写的 url 是 '/api' ，这不是真实的接口地址，   
-假设你的域名为 http://localhost:8080，那么它请求的地址即为 http://localhost:8080/api  
+假设你的域名为  http://localhost:8080    
+那么它请求的地址即为  http://localhost:8080/api  
 这个 /api 默认是不存在的，现在我们配置一下 nodejs ，让它为我们转发请求   
 
 
