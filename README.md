@@ -63,15 +63,9 @@ npm install -g vue-cli    // 加-g是安装到全局
 
 
 换了国内镜像，安装速度就很快了  
-<<<<<<< 10c08f3fb1dd4f5e996d3307268e96616a39cef3
 
 > 3.初始化项目，使用webpack打包   
 
-=======
-
-> 3.初始化项目，使用webpack打包   
-
->>>>>>> 文档格式修改
 执行命令： vue init webpack vuePic  
 执行之后将会 自动初始化一个文件夹 ：vuePic  
 ![初始化项目命令](https://github.com/cywcd/vue-piclib/blob/master/static/img/pic09.png) 
@@ -79,8 +73,8 @@ npm install -g vue-cli    // 加-g是安装到全局
 打开vuePic文件夹 可以看到 已经初始化好了 一个基础的项目： 
 ![基础项目目录](https://github.com/cywcd/vue-piclib/blob/master/static/img/pic10.png) 
 
-package.json 已经默认配置好相关应用  
-<<<<<<< 10c08f3fb1dd4f5e996d3307268e96616a39cef3
+package.json 已经默认配置好相关应用   
+
 
 > 4.解决跨域（用nodejs代理转发请求） 
 
@@ -88,15 +82,7 @@ package.json 已经默认配置好相关应用
 假设你的域名为 http://localhost:8080，那么它请求的地址即为 http://localhost:8080/api  
 这个 /api 默认是不存在的，现在我们配置一下 nodejs ，让它为我们转发请求   
 
-=======
 
-> 4.解决跨域（用nodejs代理转发请求） 
-
-请求写的 url 是 '/api' ，这不是真实的接口地址，   
-假设你的域名为 http://localhost:8080，那么它请求的地址即为 http://localhost:8080/api  
-这个 /api 默认是不存在的，现在我们配置一下 nodejs ，让它为我们转发请求   
-
->>>>>>> 文档格式修改
 假设，我需要请求的接口的入口为 http://www.xxx.com/api  
 修改 /config/index.js 配置文件，修改 dev 选项下 proxyTable 的值为如下   
 
@@ -108,6 +94,7 @@ proxyTable: {
     }
 },
 ```
+
 PS：这里使用的是一个叫 http-proxy-middleware 的 nodejs 中间件，系统已默认为我们集成，直接配置就好了   
 上面的配置的意思是：遇到从域名和端口以后，以 '/api'开头的 http请求，自动转发到 target （目标）url 地址去，实际请求地址就是 target + '/api' 
 
@@ -125,28 +112,19 @@ proxyTable: {
 },
 ```
 
-<<<<<<< 10c08f3fb1dd4f5e996d3307268e96616a39cef3
-> 5.项目引用zeptojs库，手动安装webpack-zepto  
-安装命令：  
-=======
 > 5.项目引用zeptojs库，手动安装webpack-zepto   
 
 安装命令：  
 
 ``` bash
->>>>>>> 文档格式修改
 npm i webpack-zepto -g  //全局安装  
 npm i webpack-zepto --save  //本地安装  
 ```
 
---save 和 --save-dev 的区别    
-<<<<<<< 10c08f3fb1dd4f5e996d3307268e96616a39cef3
---save 会把依赖包名称添加到 package.json 文件 dependencies 键下，  
+--save 和 --save-dev 的区别：    
+--save 会把依赖包名称添加到 package.json 文件 dependencies 键下  
 --save-dev 则添加到 package.json 文件 devDependencies 键下   
-=======
---save 会把依赖包名称添加到 package.json 文件 dependencies 键下    
---save-dev 则添加到 package.json 文件 devDependencies 键下     
->>>>>>> 文档格式修改
+
 不过这只是它们的表面区别。它们真正的区别是，devDependencies 下列出的模块，是我们开发时用的，它们不会被部署到生产环境。  
 dependencies 下的模块，则是我们生产环境中需要的依赖。     
  
@@ -154,12 +132,11 @@ dependencies 下的模块，则是我们生产环境中需要的依赖。
 package.json dependencies键下和devDependencies键下 添加 "webpack-zepto": "0.0.1"   
 
 项目中引用： 
+
 ``` bash
 import $ from 'webpack-zepto'
 ```
 > 6.其他
-<<<<<<< 10c08f3fb1dd4f5e996d3307268e96616a39cef3
-待整理...
-=======
-待整理...。
->>>>>>> 文档格式修改
+
+待整理......
+
